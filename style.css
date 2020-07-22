@@ -1,0 +1,229 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #edf2f8;
+  color: #484f57;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  width: 80%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .article-box {
+  max-width: 730px;
+  min-height: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 6px 12px 21px -1px rgba(0, 0, 0, 0.2);
+}
+
+.container .article-box .img-section {
+  min-height: 280px;
+  width: 33%;
+  background: url(./images/drawers.jpg) no-repeat center center/cover;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.container .article-box .info-section {
+  width: 67%;
+  background-color: #fff;
+  padding: 2.5rem;
+  position: relative;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.container .article-box .info-section h1 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding-right: 1rem;
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+}
+
+.container .article-box .info-section p {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.container .article-box .info-section .share-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.container .article-box .info-section .share-section .profile-pic {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+}
+
+.container .article-box .info-section .share-section p {
+  font-weight: 700;
+  padding-left: 1rem;
+  padding-top: 0.35rem;
+}
+
+.container .article-box .info-section .share-section p .date {
+  display: block;
+  font-size: 0.65rem;
+  transform: translateY(5px);
+}
+
+.container .article-box .info-section .share-section .transition {
+  position: relative;
+}
+
+.container .article-box .info-section .share-section .share-btn {
+  position: absolute;
+  border-radius: 50%;
+  top: 0px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  background: url(./images/icon-share.svg) no-repeat center;
+  background-color: #ebeef4;
+  transform: translateY(45%);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.container .article-box .info-section .share-section .share-btn .share-pos {
+  position: relative;
+}
+
+.container .article-box .info-section .share-section .share-btn .share-box {
+  width: 245px;
+  min-height: 55px;
+  background-color: #49556b;
+  border-radius: 10px;
+  position: absolute;
+  top: -85px;
+  left: -113px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .article-box .info-section .share-section .share-btn .share-box span,
+.container .article-box .info-section .share-section .share-btn .share-box img {
+  display: inline-block;
+  padding: 1rem 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.container .article-box .info-section .share-section .share-btn .share-box img {
+  cursor: pointer;
+}
+
+.container .article-box .info-section .share-section .share-btn .share-box .triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #49556b;
+  position: absolute;
+  bottom: -10px;
+  left: 48%;
+}
+
+.container .article-box .info-section .share-section .share-btn:hover {
+  background: url(./images/icon-share-white.svg) no-repeat center;
+  background-color: #6f7f98;
+}
+
+.container .article-box .mobile-share {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 88%;
+  }
+  .container .article-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4.6875rem;
+    margin-bottom: 4.875rem;
+  }
+  .container .article-box .img-section {
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+  }
+  .container .article-box .info-section {
+    width: 100%;
+    padding: 2.8125rem 1rem 0rem 1.5rem;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+  }
+  .container .article-box .info-section h1 {
+    font-size: 1rem;
+    padding-right: 0;
+  }
+  .container .article-box .info-section p {
+    padding-bottom: 2rem;
+  }
+  .container .article-box .info-section .share-section {
+    padding-bottom: 1rem;
+  }
+  .container .article-box .info-section .share-section p {
+    padding-bottom: 1rem;
+  }
+  .container .article-box .info-section .share-section .share-btn .share-box {
+    display: none;
+  }
+  .container .article-box .mobile-share {
+    width: 100%;
+    background-color: #49556b;
+    color: white;
+    display: flex;
+    position: absolute;
+    justify-content: stretch;
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    visibility: hidden;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .container .article-box .mobile-share span {
+    display: inline-block;
+    padding: 1.3rem;
+    font-size: 1.25rem;
+    color: #9eafc2;
+  }
+  .container .article-box .mobile-share .img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0 0.65rem;
+  }
+}
